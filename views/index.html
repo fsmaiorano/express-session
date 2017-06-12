@@ -1,0 +1,35 @@
+<html>
+
+<head>
+	<title>NodeJS with Express - Session Management</title>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			var email, pass;
+			$("#submit").click(function () {
+				email = $("#email").val();
+				pass = $("#password").val();
+				$.post("http://localhost:3000/login", {
+					email: email,
+					pass: pass
+				}, function (data) {
+					if (data === 'success') {
+						window.location.href = "/admin";
+					}
+				});
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div class="class container">
+		<h3>NodeJS with Express - Session Management</h3>
+		<input type="text" size="25" placeholder="E-mail" id="email"><br />
+		<input type="password" size="25" placeholder="Password" id="password"><br /><br />
+
+		<input type="button" value="Submit" id="submit">
+	</div>
+</body>
+
+</html>
