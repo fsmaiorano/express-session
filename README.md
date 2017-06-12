@@ -1,8 +1,8 @@
-### #Express-Session ###
+## Express-Session ##
 
 A simple example of handling session in Express 4.
 
-## To start project: 
+### To start project: 
 Open the terminal and use the command: 
 ```sh
  $ npm install
